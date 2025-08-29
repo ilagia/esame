@@ -1,0 +1,12 @@
+library(terra)
+library(imageRy)
+library(ggplot2)
+setwd("C:/Users/Utente/Desktop") #da sistemare
+g15<- rast("G15.jpg")
+g25<- rast("G25.jpg")
+par(mfrow=c(2,2))
+im.plotRGB(g15, 1, 2, 3)
+im.plotRGB(g25, 1, 2, 3)
+
+g15a<- im.classify(g15, num_clusters=2)
+
