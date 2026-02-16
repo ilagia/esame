@@ -20,7 +20,24 @@ par(mfrow=c(3,1)) # the first number is for the column and the second for the ro
 plot(mad23)
 plot(mad24)
 plot(mad25)
+
 # l'immagine che comparirà rappresenta l'isola prima dell'incendio, circa 2 mesi dopo e un anno dopo l'incendio
+
+dev.off()
+
+# calcoliamo il dvi per le tre immagini
+dvi23 = mad23[[1]] - mad23[[2]]
+dvi24 = mad24[[1]] - mad24[[2]]
+dvi25 = mad25[[1]] - mad25[[2]]
+
+par(mfrow=c(3,2)) # 3 righe e due colonne, sulla sinistra l'immagine normale e sulla destra il dvi
+plot(mad23)
+plot(ndvi23)
+plot(mad24)
+plot(dvi24)
+plot(mad25)
+plot(dvi25)
+
 
 
 
