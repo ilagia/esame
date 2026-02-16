@@ -1,12 +1,29 @@
+
+
+# install.packages("viridis")
+# install.packages("devtools")
+# install.packages("terra")
+# install.packages("imageRy")
+# install.packages("ggplot2")
+
+library(devtools)
 library(terra)
 library(imageRy)
 library(ggplot2)
-setwd("C:/Users/Utente/Desktop") #da sistemare
-g15<- rast("G15.jpg")
-g25<- rast("G25.jpg")
-par(mfrow=c(2,2))
-im.plotRGB(g15, 1, 2, 3)
-im.plotRGB(g25, 1, 2, 3)
+library(viridis) # in order to plot images with different viridis color ramp palettes
 
-g15a<- im.classify(g15, num_clusters=2)
+setwd("C:/Users/Utente/Desktop/foto_esame_r") # for Windows
+mad23 = rast("mad23.jpg")
+mad24 = rast("mad24.jpg")
+mad25 = rast("mad25.jpg")
+par(mfrow=c(3,1)) # the first number is for the column and the second for the row
+plot(mad23)
+plot(mad24)
+plot(mad25)
+# l'immagine che comparirà rappresenta l'isola prima dell'incendio, circa 2 mesi dopo e un anno dopo l'incendio
+
+
+
+
+
 
